@@ -1,6 +1,6 @@
 # FULL CRUD PROFILE
 
-![PreviewCRUD](/Preview.PNG"Preview CRUD")
+![PreviewCRUD](/Preview.PNG)
 
 Build using Backend side with Node JS, Express, CORS, MySQL and Frontend side with React JS, and Bulma CSS. ✨
 
