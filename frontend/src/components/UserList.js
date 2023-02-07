@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 export const UserList = () => {
   const [users, setUser] = useState([]);
@@ -19,8 +20,11 @@ export const UserList = () => {
         Fullstack CRUD Profile
       </h1>
       <div className="columns mt-5 is-centered">
-        <div className="column is-half has-text-centered">
-          <table className="table is-striped is-fullwidth">
+        <div className="box column is-half">
+          <Link className="button is-success mb-2" to={"add"}>
+            Create User
+          </Link>
+          <table className="table is-striped is-fullwidth has-text-centered">
             <thead>
               <tr>
                 <th>No</th>
@@ -38,9 +42,12 @@ export const UserList = () => {
                   <td>{user.email}</td>
                   <td>{user.gender}</td>
                   <td>
-                    <button className="button is-small is-link mr-1">
+                    <Link
+                      to={`edit/${user.id}`}
+                      className="button is-small is-link mr-1"
+                    >
                       Edit
-                    </button>
+                    </Link>
                     <button className="button is-small is-danger">
                       Delete
                     </button>

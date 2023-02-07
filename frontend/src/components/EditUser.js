@@ -40,7 +40,7 @@ const EditUser = () => {
         Edit User Profile
       </h1>
       <div className="columns mt-5 is-centered">
-        <div className="column is-half">
+        <div className="column box is-half">
           <form onSubmit={updateUser}>
             <div className="field">
               <label className="label">Name</label>
